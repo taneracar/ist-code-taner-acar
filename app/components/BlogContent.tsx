@@ -13,7 +13,10 @@ export default function BlogContent() {
   const [selectedCategory, setSelectedCategory] = useState("Hepsi");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const categories = ["Hepsi", ...new Set(data.map((item) => item.category))];
+  const categories = [
+    "Hepsi",
+    ...Array.from(new Set(data.map((item) => item.category))),
+  ];
 
   const filteredData = data.filter((item) => {
     const matchesCategory =
