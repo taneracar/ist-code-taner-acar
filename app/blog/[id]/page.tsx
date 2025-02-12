@@ -17,7 +17,8 @@ export default function BlogDetail({ params }: BlogDetailProps) {
   if (!blogItem) return notFound();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-6">
+        <h1 className="mb-10 font-extrabold text-7xl">Blog Detayı</h1>
       <div className="max-w-4xl w-full bg-white backdrop-blur-lg shadow-lg rounded-xl p-6">
         <button
           onClick={() => router.back()}

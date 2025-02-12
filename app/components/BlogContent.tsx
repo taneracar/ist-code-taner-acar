@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import data from "../data/dummy.json";
 import pic from "../assets/default.jpg";
 import FilterDropdown from "../components/FilterDropdown";
-import SearchBar from "../components/SearchBar"; // New search component
+import SearchBar from "../components/SearchBar"; 
 
 export default function BlogContent() {
   const router = useRouter();
@@ -72,7 +72,7 @@ export default function BlogContent() {
           ))
         ) : (
           <p className="text-center text-white col-span-full">
-            Haber bulunamadı
+            Blog bulunamadı
           </p>
         )}
       </div>
