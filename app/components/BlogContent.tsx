@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import data from "../data/dummy.json";
 import pic from "../assets/default.jpg";
 import FilterDropdown from "../components/FilterDropdown";
-import SearchBar from "../components/SearchBar"; 
+import SearchBar from "../components/SearchBar";
 
 export default function BlogContent() {
   const router = useRouter();
@@ -66,7 +66,7 @@ export default function BlogContent() {
                 }}
                 className="absolute bottom-4 right-4 px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg shadow-lg transition-all transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
               >
-                Details
+                İncele
               </button>
             </div>
           ))
