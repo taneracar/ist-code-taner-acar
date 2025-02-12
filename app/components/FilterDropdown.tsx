@@ -27,7 +27,7 @@ export default function FilterDropdown({
       >
         {categories.map((category, index) => (
           <option key={index} value={category}>
-            {category}
+            {category.charAt(0).toUpperCase() + category.slice(1)}
           </option>
         ))}
       </select>
