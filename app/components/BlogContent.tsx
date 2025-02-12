@@ -13,10 +13,8 @@ export default function BlogContent() {
   const [selectedCategory, setSelectedCategory] = useState("Hepsi");
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Get unique categories from data
   const categories = ["Hepsi", ...new Set(data.map((item) => item.category))];
 
-  // Filtering logic (applies both category and search filters)
   const filteredData = data.filter((item) => {
     const matchesCategory =
       selectedCategory === "Hepsi" || item.category === selectedCategory;
@@ -28,7 +26,6 @@ export default function BlogContent() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      {/* Search and Filter */}
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6">
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <FilterDropdown
@@ -37,7 +34,6 @@ export default function BlogContent() {
         />
       </div>
 
-      {/* Blog Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredData.length > 0 ? (
           filteredData.map((item, index) => (
@@ -63,7 +59,6 @@ export default function BlogContent() {
                 </span>
               </div>
 
-              {/* Hidden button, positioned at bottom-right */}
               <button
                 onClick={(e) => {
                   e.stopPropagation();
